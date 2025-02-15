@@ -49,6 +49,7 @@ class MainActivity : ComponentActivity() {
     private val viewModel by lazy {
         ViewModelProvider(this)[UserStateViewModel::class.java]
     }
+
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         enableEdgeToEdge()
@@ -56,10 +57,11 @@ class MainActivity : ComponentActivity() {
             val state = viewModel.state
             ComposeLearningTheme {
                 Surface(modifier = Modifier.fillMaxSize()) {
-                //MessageCard(card = Message("Sushant", "Compose Learning"))
-                //MessageUseCase("Something")
-                //ModifiersExamples()
-                UserStateExample(viewModel)
+                    //MessageCard(card = Message("Sushant", "Compose Learning"))
+                    //MessageUseCase("Something")
+                    //ModifiersExamples()
+                    //UserStateExample(viewModel)
+                    UserText()
                 }
 //                Conversation(SampleData.conversationSample)
             }
