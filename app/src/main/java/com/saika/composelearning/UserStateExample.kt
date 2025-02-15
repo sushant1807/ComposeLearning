@@ -47,11 +47,12 @@ fun UserStateExample(viewModel: UserStateViewModel) {
 //        }
 
         //To display the list
-        LazyColumn(modifier = Modifier
-            .fillMaxSize()
-            .weight(1f)
+        LazyColumn(
+            modifier = Modifier
+                .fillMaxSize()
+                .weight(1f)
         ) {
-            items(state.names.size){
+            items(state.names.size) {
                 Text(text = state.names[it])
             }
         }
@@ -66,13 +67,11 @@ fun UserStateExample(viewModel: UserStateViewModel) {
                 viewModel.updateText("")
             }
         )
-
     }
-
 }
 
 @Composable
-fun MyTextFieldWithState(){
+fun MyTextFieldWithState() {
     var textState by remember {
         mutableStateOf("")
     }
@@ -91,7 +90,7 @@ fun MyTextFieldWithOutState(
     textValue: String,
     onValueChanged: (String) -> Unit,
     onAddClick: () -> Unit
-){
+) {
     TextField(
         value = textValue,
         onValueChange = {

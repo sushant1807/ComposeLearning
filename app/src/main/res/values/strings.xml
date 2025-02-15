@@ -1,3 +1,7 @@
 <resources>
     <string name="app_name">ComposeLearning</string>
+    <string name="lbl_card_info">This week we successfully deployed the Custom Notification feature in MSA. Separately we have started work on the AiOla POC. We had a session with the vendor to review their API SDK. Full integration development will start from next week</string>
+    <string name="lbl_custom_learning">Custom Learning</string>
+    <string name="lbl_author">Sushant Attada</string>
+    <string name="lbl_author_role">Android Developer</string>
 </resources>

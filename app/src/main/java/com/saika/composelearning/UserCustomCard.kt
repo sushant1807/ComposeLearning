@@ -31,6 +31,7 @@ import androidx.compose.ui.draw.clip
 import androidx.compose.ui.graphics.Color
 import androidx.compose.ui.layout.ContentScale
 import androidx.compose.ui.res.painterResource
+import androidx.compose.ui.res.stringResource
 import androidx.compose.ui.text.SpanStyle
 import androidx.compose.ui.text.buildAnnotatedString
 import androidx.compose.ui.text.font.FontWeight
@@ -57,11 +58,11 @@ fun UserCustomCardLearning() {
         UserCustomCard(
             modifier = Modifier.fillMaxWidth(fraction = 0.8f),
             image = R.drawable.elephant,
-            title = "Custom Learning",
-            text = "This week we successfully deployed the Custom Notification feature in MSA. Separately we have started work on the AiOla POC. We had a session with the vendor to review their API SDK. Full integration development will start from next week",
+            title = stringResource(R.string.lbl_custom_learning),
+            text = stringResource(R.string.lbl_card_info),
             publisher = Publisher(
-                name = "Sushant Attada",
-                job = "Android Developer",
+                name = stringResource(R.string.lbl_author),
+                job = stringResource(R.string.lbl_author_role),
                 image = R.drawable.ic_launcher_background
             )
         )

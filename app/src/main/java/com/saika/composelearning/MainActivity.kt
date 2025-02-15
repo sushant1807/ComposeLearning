@@ -55,7 +55,6 @@ class MainActivity : ComponentActivity() {
         super.onCreate(savedInstanceState)
         enableEdgeToEdge()
         setContent {
-            val state = viewModel.state
             ComposeLearningTheme {
                 Surface(modifier = Modifier.fillMaxSize()) {
                     //MessageCard(card = Message("Sushant", "Compose Learning"))
@@ -63,7 +62,8 @@ class MainActivity : ComponentActivity() {
                     //ModifiersExamples()
                     //UserStateExample(viewModel)
                     //UserText()
-                    UserCustomCardLearning()
+                    //UserCustomCardLearning()
+                    UserButtons()
                 }
 //                Conversation(SampleData.conversationSample)
             }
