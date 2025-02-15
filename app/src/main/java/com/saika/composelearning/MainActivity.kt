@@ -63,7 +63,8 @@ class MainActivity : ComponentActivity() {
                     //UserStateExample(viewModel)
                     //UserText()
                     //UserCustomCardLearning()
-                    UserButtons()
+                    //UserButtons()
+                    UserTextField()
                 }
 //                Conversation(SampleData.conversationSample)
             }
