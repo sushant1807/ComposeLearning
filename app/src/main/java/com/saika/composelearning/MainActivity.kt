@@ -42,6 +42,7 @@ import androidx.compose.ui.tooling.preview.Preview
 import androidx.compose.ui.unit.dp
 import androidx.lifecycle.ViewModelProvider
 import com.saika.composelearning.animations.AnimationLearning
+import com.saika.composelearning.scaffold.ScaffoldLearning
 import com.saika.composelearning.ui.theme.ComposeLearningTheme
 import com.saika.composelearning.ui.theme.Purple40
 import com.saika.composelearning.view.LoginScreenView
@@ -67,8 +68,9 @@ class MainActivity : ComponentActivity() {
                     //UserButtons()
                     //UserTextField()
                     //LoginScreenView()
+                    //AnimationLearning()
 
-                    AnimationLearning()
+                     ScaffoldLearning()
                 }
 //                Conversation(SampleData.conversationSample)
             }
