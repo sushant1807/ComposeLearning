@@ -18,7 +18,6 @@ import androidx.compose.foundation.layout.Column
 import androidx.compose.foundation.layout.Row
 import androidx.compose.foundation.layout.Spacer
 import androidx.compose.foundation.layout.fillMaxSize
-import androidx.compose.foundation.layout.fillMaxWidth
 import androidx.compose.foundation.layout.padding
 import androidx.compose.foundation.layout.size
 import androidx.compose.foundation.layout.width
@@ -42,6 +41,7 @@ import androidx.compose.ui.res.painterResource
 import androidx.compose.ui.tooling.preview.Preview
 import androidx.compose.ui.unit.dp
 import androidx.lifecycle.ViewModelProvider
+import com.saika.composelearning.animations.AnimationLearning
 import com.saika.composelearning.ui.theme.ComposeLearningTheme
 import com.saika.composelearning.ui.theme.Purple40
 import com.saika.composelearning.view.LoginScreenView
@@ -66,8 +66,9 @@ class MainActivity : ComponentActivity() {
                     //UserCustomCardLearning()
                     //UserButtons()
                     //UserTextField()
+                    //LoginScreenView()
 
-                    LoginScreenView()
+                    AnimationLearning()
                 }
 //                Conversation(SampleData.conversationSample)
             }

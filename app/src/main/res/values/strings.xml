@@ -10,4 +10,6 @@
     <string name="lbl_email">Email</string>
     <string name="lbl_password">Password</string>
     <string name="lbl_forgot">Forgot?</string>
+    <string name="lbl_sample">Animations are essential in a modern mobile app in order to realize a smooth and understandable user experience.</string>
+    <string name="lbl_show_hide">Show/Hide</string>
 </resources>
