@@ -33,6 +33,17 @@ private val LightColorScheme = lightColorScheme(
     */
 )
 
+//on Hold
+//private val DarkColorScheme = darkColorScheme(
+//    primary = BlueGray,
+//    surface = Black,
+//)
+//
+//private val LightColorScheme = lightColorScheme(
+//    primary = Black,
+//    surface = Color.White
+//)
+
 @Composable
 fun ComposeLearningTheme(
     darkTheme: Boolean = isSystemInDarkTheme(),

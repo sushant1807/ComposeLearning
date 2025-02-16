@@ -44,6 +44,7 @@ import androidx.compose.ui.unit.dp
 import androidx.lifecycle.ViewModelProvider
 import com.saika.composelearning.ui.theme.ComposeLearningTheme
 import com.saika.composelearning.ui.theme.Purple40
+import com.saika.composelearning.view.LoginScreenView
 
 class MainActivity : ComponentActivity() {
 
@@ -64,7 +65,9 @@ class MainActivity : ComponentActivity() {
                     //UserText()
                     //UserCustomCardLearning()
                     //UserButtons()
-                    UserTextField()
+                    //UserTextField()
+
+                    LoginScreenView()
                 }
 //                Conversation(SampleData.conversationSample)
             }
