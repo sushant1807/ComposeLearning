@@ -1,5 +1,6 @@
 package com.saika.composelearning.view
 
+import android.content.res.Configuration
 import androidx.compose.foundation.Image
 import androidx.compose.foundation.isSystemInDarkTheme
 import androidx.compose.foundation.layout.Arrangement
@@ -14,7 +15,9 @@ import androidx.compose.foundation.layout.height
 import androidx.compose.foundation.layout.padding
 import androidx.compose.foundation.layout.size
 import androidx.compose.foundation.layout.width
+import androidx.compose.foundation.rememberScrollState
 import androidx.compose.foundation.shape.RoundedCornerShape
+import androidx.compose.foundation.verticalScroll
 import androidx.compose.material3.Button
 import androidx.compose.material3.ButtonDefaults
 import androidx.compose.material3.Icon
@@ -26,6 +29,7 @@ import androidx.compose.ui.Alignment
 import androidx.compose.ui.Modifier
 import androidx.compose.ui.graphics.Color
 import androidx.compose.ui.layout.ContentScale
+import androidx.compose.ui.platform.LocalConfiguration
 import androidx.compose.ui.res.painterResource
 import androidx.compose.ui.res.stringResource
 import androidx.compose.ui.text.SpanStyle
@@ -33,35 +37,67 @@ import androidx.compose.ui.text.buildAnnotatedString
 import androidx.compose.ui.text.font.FontWeight
 import androidx.compose.ui.text.withStyle
 import androidx.compose.ui.unit.dp
-import androidx.compose.ui.unit.sp
 import com.saika.composelearning.R
 import com.saika.composelearning.ui.theme.Black
 import com.saika.composelearning.ui.theme.BlueGray
 import com.saika.composelearning.ui.theme.Roboto
+import com.saika.composelearning.ui.theme.ScreenOrientation
+import com.saika.composelearning.ui.theme.dimens
 
 @Composable
 fun LoginScreenView() {
     Surface {
 
-        Column(modifier = Modifier.fillMaxSize()) {
-            TopSection()
+//        Column(modifier = Modifier.fillMaxSize()) {
+//            TopSection()
+//
+//            Spacer(modifier = Modifier.height(MaterialTheme.dimens.medium2))
+//
+//            Column(
+//                modifier = Modifier
+//                    .fillMaxSize()
+//                    .padding(horizontal = 30.dp)
+//            ) {
+//                LoginSection()
+//
+//                Spacer(modifier = Modifier.height(MaterialTheme.dimens.medium1))
+//
+//                SocialMediaSection()
+//
+//                BottomSection()
+//            }
+//        }
 
-            Spacer(modifier = Modifier.height(36.dp))
-
-            Column(
-                modifier = Modifier
-                    .fillMaxSize()
-                    .padding(horizontal = 30.dp)
-            ) {
-                LoginSection()
-                
-                Spacer(modifier = Modifier.height(30.dp))
-
-                SocialMediaSection()
-
-                BottomSection()
-            }
+        if (ScreenOrientation == Configuration.ORIENTATION_PORTRAIT){
+            PortraitLoginScreen()
+        }else{
+            PortraitLoginScreen()
         }
+    }
+}
+
+@Composable
+private fun PortraitLoginScreen() {
+    Column(
+        modifier = Modifier
+            .fillMaxSize()
+            .verticalScroll(state = rememberScrollState())
+    ) {
+        TopSection()
+        Spacer(modifier = Modifier.height(MaterialTheme.dimens.medium2))
+
+        Column(
+            modifier = Modifier
+                .fillMaxSize()
+                .padding(horizontal = MaterialTheme.dimens.medium1)
+        ) {
+            LoginSection()
+            Spacer(modifier = Modifier.height(MaterialTheme.dimens.medium1))
+            SocialMediaSection()
+        }
+        Spacer(modifier = Modifier.weight(0.8f))
+        BottomSection()
+        Spacer(modifier = Modifier.weight(0.3f))
     }
 }
 
@@ -82,7 +118,7 @@ private fun BottomSection() {
                 withStyle(
                     style = SpanStyle(
                         color = Color(0xFF94A3B8),
-                        fontSize = 14.sp,
+                        fontSize = MaterialTheme.typography.labelMedium.fontSize,
                         fontFamily = Roboto,
                         fontWeight = FontWeight.Normal
                     )
@@ -92,7 +128,7 @@ private fun BottomSection() {
                 withStyle(
                     style = SpanStyle(
                         color = uiColor,
-                        fontSize = 14.sp,
+                        fontSize = MaterialTheme.typography.labelMedium.fontSize,
                         fontFamily = Roboto,
                         fontWeight = FontWeight.Medium
                     )
@@ -114,7 +150,7 @@ private fun SocialMediaSection() {
             text = "Or continue with",
             style = MaterialTheme.typography.labelMedium.copy(color = Color(0xFF94A3B8))
         )
-        Spacer(modifier = Modifier.height(20.dp))
+        Spacer(modifier = Modifier.height(MaterialTheme.dimens.small3))
         Row(
             modifier = Modifier.fillMaxWidth(), verticalAlignment = Alignment.CenterVertically
         ) {
@@ -144,17 +180,17 @@ private fun LoginSection() {
         label = stringResource(R.string.lbl_email),
         trailing = ""
     )
-    Spacer(modifier = Modifier.height(15.dp))
+    Spacer(modifier = Modifier.height(MaterialTheme.dimens.small2))
     CustomLoginTextField(
         modifier = Modifier.fillMaxWidth(),
         label = stringResource(R.string.lbl_password),
         trailing = stringResource(R.string.lbl_forgot)
     )
-    Spacer(modifier = Modifier.height(20.dp))
+    Spacer(modifier = Modifier.height(MaterialTheme.dimens.small3))
     Button(
         modifier = Modifier
             .fillMaxWidth()
-            .height(40.dp),
+            .height(MaterialTheme.dimens.buttonHeight),
         onClick = { /*TODO*/ },
         colors = ButtonDefaults.buttonColors(
             containerColor = if (isSystemInDarkTheme()) BlueGray else Black,
@@ -173,12 +209,11 @@ private fun LoginSection() {
 @Composable
 private fun TopSection() {
     val uiColor = if (isSystemInDarkTheme()) Color.White else Black
-
     Box(contentAlignment = Alignment.TopStart) {
         Image(
             modifier = Modifier
                 .fillMaxWidth()
-                .fillMaxHeight(fraction = 0.46f),
+                .fillMaxHeight(fraction = 0.5f),
             painter = painterResource(id = R.drawable.shape),
             contentDescription = null,
             contentScale = ContentScale.FillBounds
@@ -187,12 +222,12 @@ private fun TopSection() {
         Row(
             modifier = Modifier
                 .fillMaxWidth()
-                .padding(top = 80.dp),
+                .padding(top = MaterialTheme.dimens.large),
             verticalAlignment = Alignment.CenterVertically,
             horizontalArrangement = Arrangement.Center
         ) {
             Icon(
-                modifier = Modifier.size(42.dp),
+                modifier = Modifier.size(MaterialTheme.dimens.logoSize),
                 painter = painterResource(id = R.drawable.logo),
                 contentDescription = stringResource(R.string.lbl_app_logo),
                 tint = uiColor

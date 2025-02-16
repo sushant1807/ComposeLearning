@@ -21,6 +21,7 @@ import androidx.compose.ui.draw.clip
 import androidx.compose.ui.graphics.Color
 import androidx.compose.ui.res.painterResource
 import androidx.compose.ui.unit.dp
+import com.saika.composelearning.ui.theme.dimens
 
 @Composable
 fun CustomSocialMediaSection(
@@ -38,7 +39,7 @@ fun CustomSocialMediaSection(
             )
             .clip(RoundedCornerShape(4.dp))
             .clickable { onClick }
-            .height(40.dp),
+            .height(MaterialTheme.dimens.buttonHeight),
         horizontalArrangement = Arrangement.Center,
         verticalAlignment = Alignment.CenterVertically
     ) {
