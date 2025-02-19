@@ -191,7 +191,7 @@ private fun LoginSection() {
         modifier = Modifier
             .fillMaxWidth()
             .height(MaterialTheme.dimens.buttonHeight),
-        onClick = { /*TODO*/ },
+        onClick = {  },
         colors = ButtonDefaults.buttonColors(
             containerColor = if (isSystemInDarkTheme()) BlueGray else Black,
             contentColor = Color.White

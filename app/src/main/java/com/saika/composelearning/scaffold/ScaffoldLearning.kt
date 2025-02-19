@@ -37,7 +37,7 @@ fun ScaffoldLearning() {
             NavigationBar {
                 NavigationBarItem(
                     selected = true,
-                    onClick = { /*TODO*/ },
+                    onClick = { },
                     icon = {
                         Icon(
                             imageVector = Icons.Default.Home,
@@ -47,7 +47,7 @@ fun ScaffoldLearning() {
                 )
                 NavigationBarItem(
                     selected = false,
-                    onClick = { /*TODO*/ },
+                    onClick = { },
                     icon = {
                         Icon(
                             imageVector = Icons.Default.Favorite,
@@ -57,7 +57,7 @@ fun ScaffoldLearning() {
                 )
                 NavigationBarItem(
                     selected = false,
-                    onClick = { /*TODO*/ },
+                    onClick = {  },
                     icon = {
                         Icon(
                             imageVector = Icons.Default.AccountCircle,

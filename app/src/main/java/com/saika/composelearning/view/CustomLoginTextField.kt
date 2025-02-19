@@ -38,7 +38,7 @@ fun CustomLoginTextField(
             focusedContainerColor = MaterialTheme.colorScheme.textFieldContainer,
         ),
         trailingIcon = {
-            TextButton(onClick = { /*TODO*/ }) {
+            TextButton(onClick = {  }) {
                 
                 Text(
                     text = trailing,

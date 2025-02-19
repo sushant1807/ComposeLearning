@@ -41,11 +41,10 @@ import androidx.compose.ui.res.painterResource
 import androidx.compose.ui.tooling.preview.Preview
 import androidx.compose.ui.unit.dp
 import androidx.lifecycle.ViewModelProvider
-import com.saika.composelearning.animations.AnimationLearning
-import com.saika.composelearning.scaffold.ScaffoldLearning
+import com.saika.composelearning.sideeffects.DerivedStateOfLearning
+import com.saika.composelearning.sideeffects.DisposableEffectLearning
 import com.saika.composelearning.ui.theme.ComposeLearningTheme
 import com.saika.composelearning.ui.theme.Purple40
-import com.saika.composelearning.view.LoginScreenView
 
 class MainActivity : ComponentActivity() {
 
@@ -69,8 +68,13 @@ class MainActivity : ComponentActivity() {
                     //UserTextField()
                     //LoginScreenView()
                     //AnimationLearning()
+                    //ScaffoldLearning()
 
-                     ScaffoldLearning()
+                    //Types of Side Effect
+                    //Counter(10, onCountChange = { Log.e("Test", it.toString()) })
+                    //RememberCoroutineScope()
+                    //DisposableEffectLearning()
+                    DerivedStateOfLearning()
                 }
 //                Conversation(SampleData.conversationSample)
             }
