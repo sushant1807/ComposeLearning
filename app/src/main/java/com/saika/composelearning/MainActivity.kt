@@ -48,6 +48,7 @@ import com.saika.composelearning.navigation.ScreenA
 import com.saika.composelearning.navigation.ScreenB
 import com.saika.composelearning.navigation.ScreenC
 import com.saika.composelearning.navigation.ScreenNavigationLearning
+import com.saika.composelearning.navigation.arguments.NavigationWithArguments
 import com.saika.composelearning.scroll.ScrollableStateLearning
 import com.saika.composelearning.sideeffects.DerivedStateOfLearning
 import com.saika.composelearning.sideeffects.DisposableEffectLearning
@@ -86,8 +87,9 @@ class MainActivity : ComponentActivity() {
 
                     //ScrollableStateLearning()
 
-                    ScreenNavigationLearning()
-//                Conversation(SampleData.conversationSample)
+                    //ScreenNavigationLearning()
+                    NavigationWithArguments()
+                    //Conversation(SampleData.conversationSample)
                 }
             }
         }
