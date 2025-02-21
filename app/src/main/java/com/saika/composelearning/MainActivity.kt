@@ -41,6 +41,13 @@ import androidx.compose.ui.res.painterResource
 import androidx.compose.ui.tooling.preview.Preview
 import androidx.compose.ui.unit.dp
 import androidx.lifecycle.ViewModelProvider
+import androidx.navigation.compose.NavHost
+import androidx.navigation.compose.composable
+import androidx.navigation.compose.rememberNavController
+import com.saika.composelearning.navigation.ScreenA
+import com.saika.composelearning.navigation.ScreenB
+import com.saika.composelearning.navigation.ScreenC
+import com.saika.composelearning.navigation.ScreenNavigationLearning
 import com.saika.composelearning.scroll.ScrollableStateLearning
 import com.saika.composelearning.sideeffects.DerivedStateOfLearning
 import com.saika.composelearning.sideeffects.DisposableEffectLearning
@@ -77,9 +84,11 @@ class MainActivity : ComponentActivity() {
                     //DisposableEffectLearning()
                     //DerivedStateOfLearning()
 
-                    ScrollableStateLearning()
-                }
+                    //ScrollableStateLearning()
+
+                    ScreenNavigationLearning()
 //                Conversation(SampleData.conversationSample)
+                }
             }
         }
     }
@@ -187,5 +196,4 @@ fun PreviewMessageCard() {
         //MessageCard(card = Message("Preview", "Message"))
         Conversation(SampleData.conversationSample)
     }
-
 }

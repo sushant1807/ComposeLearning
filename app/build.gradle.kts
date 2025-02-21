@@ -1,6 +1,7 @@
 plugins {
     alias(libs.plugins.android.application)
     alias(libs.plugins.jetbrains.kotlin.android)
+    alias(libs.plugins.compose.compiler)
 }
 
 android {
@@ -68,5 +69,16 @@ dependencies {
     debugImplementation(libs.androidx.ui.test.manifest)
 
     //Window Size Class
-    implementation("androidx.compose.material3:material3-window-size-class:1.1.0")
+    implementation("androidx.compose.material3:material3-window-size-class:1.3.1")
+
+
+
+    implementation(libs.androidx.navigation.compose)
+    implementation(platform(libs.androidx.compose.bom.v20240400))
+    implementation(libs.ui)
+    implementation(libs.ui.graphics)
+    implementation(libs.ui.tooling.preview)
+    implementation(libs.material3)
+    debugImplementation(libs.ui.tooling)
+    debugImplementation(libs.ui.test.manifest)
 }

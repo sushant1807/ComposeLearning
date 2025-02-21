@@ -74,9 +74,13 @@ fun UserTextField(){
                     Text(text = if (isPasswordVisible) "Hide" else "Show")
                 }
             },
-            colors = TextFieldDefaults.textFieldColors(
-                containerColor = Color.Transparent,
-                cursorColor = Color.Red
+            colors = TextFieldDefaults.colors(
+                focusedTextColor = Color.Blue,
+                unfocusedTextColor = Color.Gray,
+                focusedContainerColor = Color.LightGray,
+                unfocusedContainerColor = Color.White,
+                focusedIndicatorColor = Color.Transparent,
+                unfocusedIndicatorColor = Color.Transparent,
             ),
             singleLine = true,
             //Without Animation for hint
